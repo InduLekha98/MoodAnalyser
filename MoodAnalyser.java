@@ -1,9 +1,15 @@
 public class MoodAnalyser {
-        public String analyseMood (String message){
-            System.out.println("Welcome to Mood Analyser Problem");
-            if (message.contains("sad"))
+    public String msg;
+    public MoodAnalyser(String msg) {
+        this.msg = msg;
+    }
+    public String analyseMood() {
+        try {
+            if (msg.contains("SAD"))
                 return "SAD";
-            else
+                return "HAPPY";
+        } catch (NullPointerException e) {
                 return "HAPPY";
         }
+    }
 }
